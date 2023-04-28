@@ -1,4 +1,4 @@
-name: Test
+name: nix-develop-command test
 
 on: [push]
 

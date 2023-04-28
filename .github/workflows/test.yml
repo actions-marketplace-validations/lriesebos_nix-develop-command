@@ -1,0 +1,15 @@
+name: Test
+
+on: [push]
+
+jobs:
+  ubuntu:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: cachix/install-nix-action@v20
+      - uses: ./
+        with:
+          command: "which hello"
+          options: "-i"
+          working-directory: "test/"
